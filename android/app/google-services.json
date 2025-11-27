@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "303688320714",
+    "project_id": "chaicheck",
+    "storage_bucket": "chaicheck.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303688320714:android:3280a8896c36d2dcfdd633",
+        "android_client_info": {
+          "package_name": "com.chaicheck1.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD85gWulQg_2R36qQF0HEiiwvDvz6hHy-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
