@@ -42,7 +42,7 @@ dependencies:
 
   # Sharing
   share_plus: ^7.2.1
-  receive_sharing_intent: ^1.8.1
+  receive_sharing_intent: ^1.8.2
 
   # Utilities
   uuid: ^4.2.1

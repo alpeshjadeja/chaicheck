@@ -15,15 +15,15 @@ subprojects {
     val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
     project.layout.buildDirectory.value(newSubprojectBuildDir)
 }
+
 subprojects {
     project.evaluationDependsOn(":app")
 
     afterEvaluate {
-        // Force Java compilation target - use release option for stronger enforcement
+        // Force Java compilation target
         tasks.withType<JavaCompile>().configureEach {
             sourceCompatibility = "17"
             targetCompatibility = "17"
-            options.release.set(17)
         }
 
         // Force Kotlin compilation target
@@ -33,7 +33,7 @@ subprojects {
             }
         }
 
-        // Configure Android library plugins
+        // Configure Android library plugins specifically
         plugins.withId("com.android.library") {
             extensions.configure<com.android.build.gradle.LibraryExtension> {
                 compileOptions {
@@ -43,8 +43,8 @@ subprojects {
             }
         }
 
-        // Configure Kotlin Android plugin
-        plugins.withId("kotlin-android") {
+        // Also configure Kotlin options for Android libraries
+        plugins.withId("org.jetbrains.kotlin.android") {
             tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
                 kotlinOptions {
                     jvmTarget = "17"
