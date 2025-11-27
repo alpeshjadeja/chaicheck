@@ -1,4 +1,4 @@
-package com.chaicheck.chaicheck
+package com.chaicheck.app
 
 import io.flutter.embedding.android.FlutterActivity
 
