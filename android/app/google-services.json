@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:303688320714:android:9738e416541853effdd633",
+        "mobilesdk_app_id": "1:303688320714:android:65c3d3c696777dcafdd633",
         "android_client_info": {
-          "package_name": "com.chaicheck.cpp"
+          "package_name": "com.chaicheck.app"
         }
       },
       "oauth_client": [],
