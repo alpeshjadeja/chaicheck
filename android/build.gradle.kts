@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 allprojects {
     repositories {
         google()
@@ -17,6 +19,21 @@ subprojects {
 }
 subprojects {
     project.evaluationDependsOn(":app")
+
+    afterEvaluate {
+        // Force all subprojects to use JVM 17
+        tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+            kotlinOptions {
+                jvmTarget = "17"
+            }
+        }
+
+        // Force Java compilation to use JVM 17
+        tasks.withType<JavaCompile>().configureEach {
+            sourceCompatibility = JavaVersion.VERSION_17.toString()
+            targetCompatibility = JavaVersion.VERSION_17.toString()
+        }
+    }
 }
 
 tasks.register<Delete>("clean") {
