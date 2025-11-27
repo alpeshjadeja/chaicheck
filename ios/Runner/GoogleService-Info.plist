@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.chaicheck1.app</string>
+	<string>com.chaicheck.app</string>
 	<key>PROJECT_ID</key>
 	<string>chaicheck</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:303688320714:ios:bb3b021942f182e7fdd633</string>
+	<string>1:303688320714:ios:194967588ca1cd13fdd633</string>
 </dict>
 </plist>
