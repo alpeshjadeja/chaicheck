@@ -42,7 +42,7 @@ dependencies:
 
   # Sharing
   share_plus: ^7.2.1
-  receive_intent: ^0.3.0  # JVM 17 compatible alternative to receive_sharing_intent
+  receive_intent: ^0.2.7  # JVM 17 compatible alternative to receive_sharing_intent
 
   # Utilities
   uuid: ^4.2.1
