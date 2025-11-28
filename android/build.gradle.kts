@@ -17,8 +17,6 @@ subprojects {
     val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
     project.layout.buildDirectory.value(newSubprojectBuildDir)
 
-    project.evaluationDependsOn(":app")
-
     afterEvaluate {
         // Force Java compilation target
         tasks.withType<JavaCompile>().configureEach {
