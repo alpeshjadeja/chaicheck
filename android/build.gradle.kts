@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 allprojects {
     repositories {
         google()
@@ -28,8 +30,8 @@ subprojects {
 
         // Force Kotlin compilation target
         tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-            kotlinOptions {
-                jvmTarget = "17"
+            compilerOptions {
+                jvmTarget.set(JvmTarget.JVM_17)
             }
         }
 
@@ -46,8 +48,8 @@ subprojects {
         // Also configure Kotlin options for Android libraries
         plugins.withId("org.jetbrains.kotlin.android") {
             tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-                kotlinOptions {
-                    jvmTarget = "17"
+                compilerOptions {
+                    jvmTarget.set(JvmTarget.JVM_17)
                 }
             }
         }
